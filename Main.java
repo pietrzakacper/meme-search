@@ -28,8 +28,6 @@ public class Main {
             filesToTags.put(memeFile, tagsLine.split(" "));
         }
 
-        System.out.println("There are " + filesToTags.size() + " memes in our database.");
-
         System.out.print("Please type tags (space separated) to search: ");
 
         Scanner scan = new Scanner(System.in);
@@ -44,8 +42,6 @@ public class Main {
                 filesToMatchedTagsNumber.put(memeFile, tagsIntersection.length);
             }
         }
-
-        // @todo sort fileToMatchedTagsNumber
 
         for(File matchedFile: filesToMatchedTagsNumber.keySet()) {
             printMemeInFile(matchedFile);
